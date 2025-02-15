@@ -1,0 +1,72 @@
+# Nylo - Micro-framework for Flutter.
+#
+# Website: https://nylo.dev
+# Official repository: https://github.com/nylo-core/nylo
+# Author: Anthony Gordon <https://github.com/agordn52>
+
+name: flutter_app
+description: A new Nylo Flutter application.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: ">=3.24.0 <4.0.0"
+dependencies:
+  file_picker: ^8.3.7
+  pdfx: ^2.8.0
+  pull_to_refresh_flutter3: ^2.0.2
+  url_launcher: ^6.2.6
+  google_fonts: ^6.2.1
+  analyzer: ^6.7.0
+  intl: ^0.19.0
+  nylo_framework: ^6.5.12
+  pretty_dio_logger: ^1.4.0
+  cupertino_icons: ^1.0.8
+  path_provider: ^2.1.4
+  flutter_local_notifications: ^18.0.1
+  font_awesome_flutter: ^10.8.0
+  scaffold_ui: ^1.2.1
+  fluttertoast: ^8.2.12
+  dotted_border: ^2.1.0
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  rename: ^3.0.2
+  flutter_launcher_icons: ^0.14.3
+  # The following line 'flutter_lints' activates a set of recommended lints for Flutter apps,
+  # packages, and plugins designed to encourage good coding practices.
+#  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+# APP ICON - public/app_icon/icon.png
+# Build icons: "dart run flutter_launcher_icons"
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "public/app_icon/icon.png"
+  remove_alpha_ios: true
+
+# RENAME YOUR PROJECT
+# flutter pub run rename setAppName --targets ios,android --value "YourAppName"
+
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - public/fonts/
+    - public/images/
+    - public/app_icon/
+    - lang/
+    - .env
