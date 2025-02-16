@@ -71,3 +71,4 @@ flutter:
     - public/app_icon/
     - lang/
     - .env
+    - shorebird.yaml

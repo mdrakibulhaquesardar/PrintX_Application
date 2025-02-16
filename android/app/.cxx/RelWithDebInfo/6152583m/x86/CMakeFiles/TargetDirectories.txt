@@ -1,0 +1,2 @@
+E:/Local Education/Work_Stattion/printing_ecom_application/android/app/.cxx/RelWithDebInfo/6152583m/x86/CMakeFiles/edit_cache.dir
+E:/Local Education/Work_Stattion/printing_ecom_application/android/app/.cxx/RelWithDebInfo/6152583m/x86/CMakeFiles/rebuild_cache.dir
