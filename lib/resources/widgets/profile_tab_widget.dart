@@ -85,8 +85,8 @@ class _ProfileTabState extends NyState<ProfileTab> {
                   Expanded(
                     child: Column(
                       children: [
-                        Text("Points").bodyMedium(),
-                        Text("0").titleLarge(fontWeight: FontWeight.bold),
+                        Text("Wallet").bodyMedium(),
+                        Text("৳ 5.00").titleLarge(fontWeight: FontWeight.bold),
                       ],
                     ),
                   ),
@@ -145,6 +145,25 @@ class _ProfileTabState extends NyState<ProfileTab> {
                   });
                 },
               ).paddingSymmetric(vertical: 5),
+              Divider(),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image.network("https://cdn-icons-png.flaticon.com/512/25/25231.png",width: 20,height: 20),
+                  SizedBox(width: 10),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text("Contribute To Our Project").bodyMedium(color: Colors.grey),
+                      Text("Help us to improve our project by contributing to our project").bodySmall(color: Colors.grey),
+                      TextButton(onPressed: (){}, child: Text("Source Code").bodyMedium(color: ThemeColor.get(context).primaryAccent,fontWeight: FontWeight.bold))
+                    ],
+                  ),
+
+                ],
+              )
             ],
           ),
         ),

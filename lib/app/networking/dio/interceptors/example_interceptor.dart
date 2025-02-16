@@ -31,9 +31,6 @@ class ExampleInterceptor extends Interceptor {
     }
     if(err.response?.statusCode == 400) {
     }
-    else {
-      Fluttertoast.showToast(msg: "Connection Timeout", backgroundColor: Colors.red);
-    }
 
 
 

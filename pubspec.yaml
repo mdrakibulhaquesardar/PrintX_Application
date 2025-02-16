@@ -55,6 +55,7 @@ flutter_launcher_icons:
 
 # RENAME YOUR PROJECT
 # flutter pub run rename setAppName --targets ios,android --value "YourAppName"
+#rename setBundleId --targets android --value "com.example.bundleId"
 
 flutter:
 

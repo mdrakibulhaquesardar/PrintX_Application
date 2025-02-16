@@ -10,6 +10,7 @@ import '../../app/networking/customer_api_service.dart';
 import '../../bootstrap/helpers.dart';
 import '../pages/login_page.dart';
 import '../pages/order_details_page.dart';
+import '../pages/template_order_details_page.dart';
 import 'buttons/buttons.dart';
 import 'order_tracking_card_widget.dart';
 
@@ -22,7 +23,6 @@ class HomeTab extends StatefulWidget {
   createState() => _HomeTabState();
 }
 
-
 class _HomeTabState extends NyState<HomeTab> {
   @override
   get init => () async {
@@ -34,7 +34,7 @@ class _HomeTabState extends NyState<HomeTab> {
           products = products;
         });
       }),
-      _apiService.trackOrders().then((value) {
+      _apiService.trackOrders().then((value) async {
         order = value;
         setState(() {
           order = order;
@@ -42,9 +42,7 @@ class _HomeTabState extends NyState<HomeTab> {
       }),
     ]);
     await setLoading(false);
-
   };
-
 
   _HomeTabState() {
     stateName = HomeTab.state;
@@ -52,12 +50,8 @@ class _HomeTabState extends NyState<HomeTab> {
 
   @override
   stateUpdated(dynamic data) async {
-    setState(() {
-
-    });
+    setState(() {});
   }
-
-
 
   Map user = {};
   CustomerApiService _apiService = CustomerApiService();
@@ -71,20 +65,15 @@ class _HomeTabState extends NyState<HomeTab> {
   Widget view(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
-        leading: Container(
-          width: 20,
-          height: 20,
-          child: Logo(
-            width: 30,
-            height: 30,
-          ),
-        ),
+        backgroundColor: Colors.white,
+        title: Text("PrintX").displayMedium(fontWeight: FontWeight.bold, color: Colors.black, fontFamily: "Poppins"),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.notifications_none)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.notifications_none, color: Colors.black)),
           CircleAvatar(
+            backgroundColor: Colors.transparent,
             radius: 15,
-            backgroundImage: NetworkImage("https://img.freepik.com/free-vector/man-profile-account-picture_24908-81754.jpg"),
+            backgroundImage: NetworkImage(
+                "https://cdn-icons-png.flaticon.com/512/8744/8744028.png"),
           ).paddingOnly(right: 8),
         ],
       ),
@@ -116,7 +105,10 @@ class _HomeTabState extends NyState<HomeTab> {
                             height: 10,
                           ),
                     Text("All Products")
-                        .titleMedium(fontWeight: FontWeight.bold, fontFamily: "Poppins", color: ThemeColor.get(context).primaryAccent)
+                        .titleMedium(
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Poppins",
+                            color: ThemeColor.get(context).primaryAccent)
                         .paddingSymmetric(horizontal: 20),
                     Text("Here are some of the products you might like")
                         .bodySmall(fontFamily: "Poppins")
@@ -129,34 +121,46 @@ class _HomeTabState extends NyState<HomeTab> {
                         children: [
                           Container(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 5),
                             decoration: BoxDecoration(
                               color: Colors.grey[200],
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Column(
                               children: [
-                                Image.network("https://cdn3d.iconscout.com/3d/premium/thumb/arquivo-8334581-6648107.png", width: 50, height: 50),
+                                Image.network(
+                                    "https://cdn3d.iconscout.com/3d/premium/thumb/arquivo-8334581-6648107.png",
+                                    width: 50,
+                                    height: 50),
                                 SizedBox(height: 5),
                                 Text("1 Blank Cover Page")
-                                    .bodyMedium(fontFamily: "Poppins", color: Colors.grey[800])
+                                    .bodyMedium(
+                                        fontFamily: "Poppins",
+                                        color: Colors.grey[800])
                                     .paddingOnly(bottom: 5),
                               ],
                             ),
                           ).paddingSymmetric(horizontal: 10),
                           Container(
                             width: MediaQuery.of(context).size.width * 0.4,
-                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 5),
                             decoration: BoxDecoration(
                               color: Colors.grey[200],
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Column(
                               children: [
-                                Image.network("https://cdn3d.iconscout.com/3d/premium/thumb/edit-file-3d-icon-download-in-png-blend-fbx-gltf-formats--note-document-pack-files-folders-icons-6220909.png?f=webp", width: 50, height: 50),
+                                Image.network(
+                                    "https://cdn3d.iconscout.com/3d/premium/thumb/edit-file-3d-icon-download-in-png-blend-fbx-gltf-formats--note-document-pack-files-folders-icons-6220909.png?f=webp",
+                                    width: 50,
+                                    height: 50),
                                 SizedBox(height: 5),
                                 Text("1 Blank Index Page")
-                                    .bodyMedium(fontFamily: "Poppins", color: Colors.grey[800])
+                                    .bodyMedium(
+                                        fontFamily: "Poppins",
+                                        color: Colors.grey[800])
                                     .paddingOnly(bottom: 5),
                               ],
                             ),
@@ -172,13 +176,12 @@ class _HomeTabState extends NyState<HomeTab> {
                       itemBuilder: (context, index) {
                         return ProductCard(
                           title: products[index].title ?? "Product Title",
-                          description: products[index].description ?? "Product Description",
+                          description: products[index].description ??
+                              "Product Description",
                           price: products[index].pricePerPage ?? "0.00",
                           onTap: () {
-                            routeTo(OrderDetailsPage.path, data: {
-                              "product": products[index],
-                              "isTemplate": true,
-                            });
+                            routeTo(TemplateOrderDetailsPage.path,
+                                data: products[index]);
                           },
                         );
                       },

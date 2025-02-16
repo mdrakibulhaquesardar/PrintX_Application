@@ -82,8 +82,8 @@ class CustomerApiService extends NyApiService {
       headers: {
         "Authorization": "Bearer ${await Keys.bearerToken.read()}",
       },
-      cacheKey: "products",
-      cacheDuration: const Duration(hours: 1), // cache for 1 hour
+      // cacheKey: "products",
+      // cacheDuration: const Duration(hours: 1), // cache for 1 hour
       handleSuccess: (response) async {
         if (response.statusCode == 200) {
           List<dynamic> data = response.data;
@@ -97,7 +97,7 @@ class CustomerApiService extends NyApiService {
 
 // Last One Order Tracking
 
-  Future<Order> trackOrders() async {
+  Future<Order?> trackOrders() async {
     return await network(
       request: (request) => request.get("/api/customer/orders"),
       headers: {
@@ -110,7 +110,7 @@ class CustomerApiService extends NyApiService {
           List<dynamic> data = response.data;
           return Order.fromJson(data.last);
         } else {
-          throw Exception("Failed to load orders");
+          return null;
         }
       },
       handleFailure: (error) {
@@ -230,6 +230,22 @@ class CustomerApiService extends NyApiService {
       },
     );
   }
+
+Future downloadPdf({required String pdfUrl}) async {
+  return await network(
+    request: (request) => request.get(pdfUrl),
+    headers: {
+      "Authorization": "Bearer ${await Keys.bearerToken.read()}",
+    },
+    handleSuccess: (response) async {
+      if (response.statusCode == 200) {
+        return response.data;
+      } else {
+        throw Exception("Failed to download pdf");
+      }
+    },
+  );
+}
 
 
 

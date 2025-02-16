@@ -40,10 +40,9 @@ class _LoginPageState extends NyPage<LoginPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.network(
-                    "https://img.freepik.com/free-photo/computer-security-with-login-password-padlock_107791-16191.jpg",
-                    fit: BoxFit.cover,
-                  ),
+                Image.asset(
+                "login-password-padloc.jpg",
+              ).localAsset(),
                   Row(
                     children: [
 

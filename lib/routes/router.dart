@@ -1,3 +1,4 @@
+import '/resources/pages/template_order_details_page.dart';
 import '/resources/pages/order_details_page.dart';
 import '/resources/pages/my_orders_page.dart';
 import '/resources/pages/coupons_page.dart';
@@ -46,6 +47,7 @@ appRouter() => nyRoutes((router) {
   router.add(CouponsPage.path);
   router.add(MyOrdersPage.path);
   router.add(OrderDetailsPage.path);
+  router.add(TemplateOrderDetailsPage.path);
 });
 
 

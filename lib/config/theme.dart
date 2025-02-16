@@ -24,7 +24,7 @@ final List<BaseThemeConfig<ColorStyles>> appThemes = [
   BaseThemeConfig<ColorStyles>(
     id: getEnv('DARK_THEME_ID'),
     description: "Dark theme",
-    theme: darkTheme,
-    colors: DarkThemeColors(),
+    theme: lightTheme,
+    colors: LightThemeColors(),
   ),
 ];

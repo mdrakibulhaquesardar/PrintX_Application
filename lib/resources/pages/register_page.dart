@@ -39,10 +39,9 @@ class _RegisterPageState extends NyPage<RegisterPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.network(
-                    "https://static.vecteezy.com/system/resources/previews/016/716/631/non_2x/flat-isometric-3d-illustration-concept-of-creating-personal-data-for-registration-free-vector.jpg",
-                    fit: BoxFit.cover,
-                  ),
+                  Image.asset(
+                    "3d-registration.jpg",
+                  ).localAsset(),
                   Row(
                     children: [
                       Text("Register")
