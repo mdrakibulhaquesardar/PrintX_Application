@@ -9,6 +9,7 @@ import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 import '../../app/networking/customer_api_service.dart';
 import '../../bootstrap/helpers.dart';
 import '../pages/login_page.dart';
+import '../pages/order_details_page.dart';
 import 'buttons/buttons.dart';
 import 'order_tracking_card_widget.dart';
 
@@ -173,6 +174,12 @@ class _HomeTabState extends NyState<HomeTab> {
                           title: products[index].title ?? "Product Title",
                           description: products[index].description ?? "Product Description",
                           price: products[index].pricePerPage ?? "0.00",
+                          onTap: () {
+                            routeTo(OrderDetailsPage.path, data: {
+                              "product": products[index],
+                              "isTemplate": true,
+                            });
+                          },
                         );
                       },
                     ),

@@ -10,6 +10,7 @@ import '../../app/networking/customer_api_service.dart';
 import '../widgets/buttons/buttons.dart';
 import '../widgets/full_loader_widget.dart';
 import '../widgets/home_tab_widget.dart';
+import 'my_orders_page.dart';
 
 class OrderDetailsPage extends NyStatefulWidget {
 
@@ -24,6 +25,7 @@ class _OrderDetailsPageState extends NyPage<OrderDetailsPage> {
   get init => () async {
 
     await _calculateTotalPrice();
+    printDebug(widget.data());
 
   };
 
@@ -63,7 +65,7 @@ class _OrderDetailsPageState extends NyPage<OrderDetailsPage> {
       if (value == 0) {
         LoadingDialog.hide(context);
         Fluttertoast.showToast(msg: "Order Placed", backgroundColor: Colors.green);
-        Navigator.pop(context);
+        routeTo(MyOrdersPage.path,navigationType: NavigationType.pushReplace);
       } else {
         LoadingDialog.hide(context);
         Fluttertoast.showToast(msg: "Failed to place order", backgroundColor: Colors.red);
