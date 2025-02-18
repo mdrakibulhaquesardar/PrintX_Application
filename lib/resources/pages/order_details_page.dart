@@ -33,12 +33,13 @@ class _OrderDetailsPageState extends NyPage<OrderDetailsPage> {
   double total_price = 0;
   double delivery_charge = 0;
   double sub_total = 0;
+  double price_per_page = 4;
   bool isCouponApplied = false;
 
   Future  _calculateTotalPrice() async {
 
       totalPages = double.parse(widget.data()["totalPages"].toString());
-      total_price =  totalPages*5;
+      total_price =  totalPages*price_per_page;
       delivery_charge = 0;
       sub_total = total_price + delivery_charge;
 
@@ -90,7 +91,7 @@ class _OrderDetailsPageState extends NyPage<OrderDetailsPage> {
                Text("Checkout Order").titleLarge(
                   color: Theme.of(context).primaryColor
                 ),
-                Text("Order ID: 123456").bodySmall(),
+                Text("Order ID: Axd477c").bodySmall(),
                    Container(
             width: double.infinity,
             margin: EdgeInsets.only(top: 10),
@@ -220,7 +221,7 @@ class _OrderDetailsPageState extends NyPage<OrderDetailsPage> {
                             fontWeight: FontWeight.bold,
                             color: Colors.black87,
                           ),
-                          Icon(Icons.money, color: ThemeColor.get(context).primaryAccent),
+                          Icon(Icons.opacity_rounded, color: ThemeColor.get(context).primaryAccent),
                         ],
                       ),
                       Divider(thickness: 1),
