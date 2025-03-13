@@ -40,6 +40,9 @@ class _HomeTabState extends NyState<HomeTab> {
           order = order;
         });
       }),
+
+
+
     ]);
     await setLoading(false);
   };
@@ -53,7 +56,7 @@ class _HomeTabState extends NyState<HomeTab> {
     setState(() {});
   }
 
-  Map user = {};
+
   CustomerApiService _apiService = CustomerApiService();
   List<Product> products = [];
   Order? order;
@@ -84,6 +87,7 @@ class _HomeTabState extends NyState<HomeTab> {
           physics: BouncingScrollPhysics(),
           onRefresh: () async {
             await init();
+            _apiService.getProfile();
           },
           child: SingleChildScrollView(
             child: Container(

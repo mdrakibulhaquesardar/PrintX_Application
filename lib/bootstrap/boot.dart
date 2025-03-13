@@ -4,6 +4,8 @@ import '/bootstrap/app.dart';
 import '/config/providers.dart';
 import 'package:nylo_framework/nylo_framework.dart';
 
+import 'helpers.dart';
+
 /* Boot
 |--------------------------------------------------------------------------
 | The boot class is used to initialize your application.
@@ -45,4 +47,9 @@ _setup() async {
   //     encryptedSharedPreferences: false
   //   )
   // );
+
+
+  /// Clean up cache directories on app start up
+     cleanUpCache();
+
 }

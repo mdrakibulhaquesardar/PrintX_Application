@@ -71,7 +71,7 @@ class _MyOrdersPageState extends NyPage<MyOrdersPage> {
                       _apiService
                           .cancelOrder(
                               orderId: orders.reversed.toList()[index].id!)
-                          .then((value) {
+                          .then((value)  {
                         if (value == 0) {
                           orders.removeAt(orders.length - 1 - index);
                           setState(() {

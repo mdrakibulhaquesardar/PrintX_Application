@@ -60,13 +60,14 @@ class _LoginPageState extends NyPage<LoginPage> {
                         form.submit(
                           onSuccess: (data) {
                             LoadingDialog.show(context);
-                            _apiService.loginCustomer(data: data).then((customer) async {
+                            _apiService.loginCustomer(data: data).then((value) {
                               LoadingDialog.hide(context);
-                              if(customer == 0) {
-                                routeTo(BaseNavigationHub.path ,navigationType: NavigationType.pushAndForgetAll);
-                              }
-                              else {
+                              if (value != null && value == 0) {
+                                print( "Login successful : $value");
                                 LoadingDialog.hide(context);
+                                routeTo(BaseNavigationHub.path ,navigationType: NavigationType.pushAndForgetAll);
+                              }if(value == null || value == 1){
+                                print("Incorrect login details");
                               }
                             });
                           },
