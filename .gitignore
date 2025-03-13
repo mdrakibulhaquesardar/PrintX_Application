@@ -9,11 +9,17 @@
 .history
 .svn/
 
+
+
 # IntelliJ related
 *.iml
 *.ipr
 *.iws
 .idea/
+
+# Environment files
+.env
+.shorebird.yaml
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
@@ -30,6 +36,7 @@
 .pub/
 /build/
 
+
 # Web related
 lib/generated_plugin_registrant.dart
 
@@ -42,7 +49,5 @@ app.*.map.json
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 Serverinfo
-.env
-Serverinfo
-.env
 shorebird.yaml
+.env

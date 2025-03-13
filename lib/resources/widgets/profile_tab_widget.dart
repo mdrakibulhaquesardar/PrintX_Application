@@ -159,7 +159,15 @@ class _ProfileTabState extends NyState<ProfileTab> {
                       children: [
                         Text("Contribute To Our Project").bodyMedium(color: Colors.grey),
                         Text("Help us to improve our project by contributing to our project").bodySmall(color: Colors.grey),
-                        TextButton(onPressed: (){}, child: Text("Source Code").bodyMedium(color: ThemeColor.get(context).primaryAccent,fontWeight: FontWeight.bold))
+                        Row(
+                          children: [
+                            TextButton(onPressed: () async {
+                            }, child: Text("Source Code").bodyMedium(color: ThemeColor.get(context).primaryAccent,fontWeight: FontWeight.bold)),
+                            Text("V1.0.2").bodySmall(color: Colors.grey).paddingOnly(right: 5),
+                            //@Copyright
+                            Text("© 2025").bodySmall(color: Colors.grey),
+                          ],
+                        )
                       ],
                     ),
 
