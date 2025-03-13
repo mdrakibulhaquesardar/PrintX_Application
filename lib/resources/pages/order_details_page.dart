@@ -26,9 +26,10 @@ class _OrderDetailsPageState extends NyPage<OrderDetailsPage> {
 
     await _calculateTotalPrice();
     printDebug(widget.data());
+    user = await Auth.data();
 
   };
-
+  Map user = {};
   double totalPages = 0;
   double total_price = 0;
   double delivery_charge = 0;
@@ -50,12 +51,12 @@ class _OrderDetailsPageState extends NyPage<OrderDetailsPage> {
 
 
   Future _placeOrder() async {
-    printDebug("Calling Place Order ${_textEditingController.text}");
     FormData data = FormData.fromMap({
       "pdf_file": await MultipartFile.fromFile(widget.data()["file"].path),
       "total_pages": widget.data()["totalPages"],
       "total_price": sub_total,
       "delivery_charge": delivery_charge,
+      "page_count": totalPages,
       if(isCouponApplied) "coupon_code": _textEditingController.text,
       "color": "Color",
       'note': _noteController.text

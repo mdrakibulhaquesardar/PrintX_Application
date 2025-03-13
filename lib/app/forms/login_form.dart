@@ -15,7 +15,8 @@ class LoginForm extends NyFormData {
   fields() => [
         Field.text("login",
             prefixIcon: Icon(Icons.person),
-            dummyData: "221311160",
+            header: Text("Student ID"),
+            dummyData: "221311146",
             validate: FormValidator()
                 .notEmpty()
                 .minLength(9)
@@ -24,8 +25,10 @@ class LoginForm extends NyFormData {
         ),
 
         Field.password(
+
             "password",
-            dummyData: 'Add3445@2ef',
+            dummyData: 'HRIDOYvai123',
+            header: Text("Password"),
             validate: FormValidator.password(strength: 1), style: "compact"
         ),
       ];
