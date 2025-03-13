@@ -1,68 +1,56 @@
-![Nylo Banner](https://nylo.dev/images/nylo_logo_header.png)
 
-<p align="center">
-  <a href="https://github.com/nylo-core/nylo/releases"><img src="https://img.shields.io/github/v/release/nylo-core/nylo?style=plastic" alt="Latest Release Version"></a>
-  <a href="https://github.com/nylo-core/nylo/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/nylo-core/nylo?style=plastic"></a>
-  <a href="#"><img alt="GitHub stars" src="https://img.shields.io/github/stars/nylo-core/nylo?style=plastic"></a>
-</p>
 
-## Nylo
+<img src="public\images\1741807209407.jpg" width="" alt="PrintX banner">
 
-Nylo is a micro-framework for Flutter which is designed to help simplify developing apps. Every project provides a simple boilerplate and MVC pattern to help you build apps easier. 
 
-This project is open source and MIT-licenced, we welcome any contributions. You can join as a backer/sponsor to fund future development for this project [here](https://nylo.dev)
+# PrintX: আমার সমস্যা থেকে একটা দারুণ সমাধান! 🚀
 
----
+আমি নিজের কাজের জন্য একটা প্রিন্টার কিনেছিলাম। পরে দেখি, ইউনিভার্সিটিতে ল্যাব রিপোর্ট, অ্যাসাইনমেন্ট – এগুলো তো প্রায়ই প্রিন্ট করতে হয়। বাইরে গেলে প্রতি পেজ ৫ টাকা! ভাবলাম, বন্ধুরা যদি আমার কাছ থেকে প্রিন্ট নেয়, তাহলে শুধু কাগজ আর কালি বাবদ খরচটাই নিলেই তো হয়।
 
-## Features
-Some core features available
-* [Routing](https://nylo.dev/docs/6.x/router).
-* [Themes and styling](https://nylo.dev/docs/6.x/themes-and-styling).
-* [Localization](https://nylo.dev/docs/6.x/localization).
-* [CLI for generating project files](https://nylo.dev/docs/6.x/metro).
-* [Elegant API Services for Networking](https://nylo.dev/docs/6.x/networking).
-* [Creating App Icons](https://nylo.dev/docs/6.x/app-icons).
-* [Project Configuration](https://nylo.dev/docs/6.x/configuration).
-* [Streamlined Project Structure](https://nylo.dev/docs/6.x/directory-structure).
+কিন্তু কিছুদিন পর বুঝলাম, ব্যাপারটা আস্তে আস্তে জগাখিচুড়ি হয়ে যাচ্ছে।
 
-## Requirements
-* Flutter >= 3.24.0
+- কেউ মেসেঞ্জারে ফাইল পাঠাচ্ছে,
+- কেউ ইমেইল করছে,
+- কেউ গুগল ড্রাইভের লিংক দিচ্ছে!
+  
+একেক জায়গায় ফাইল খুঁজে বের করা একটা যুদ্ধ! 😩 তার উপর, কার থেকে কত টাকা পেলাম, কার কত বাকি – এসব হিসাবও গন্ডগোল হয়ে যাচ্ছিল।
 
-## Getting Started
+তখন মনে হলো, এই সমস্যার আসলে একটা ডিজিটাল সমাধান দরকার। আর আমি তো নিজেই সফটওয়্যার ডেভেলপার! 😎  
+**Let’s Make a Software – PrintX!**
 
-``` bash
-git clone https://github.com/nylo-core/nylo.git
-```
+## ✨ PrintX কীভাবে কাজ করবে?
 
-## Documentation
-View our [docs](https://nylo.dev/docs) and visit [nylo.dev](https://nylo.dev)
+### 🔹 ইউজার সিস্টেম:
+- রেজিস্ট্রেশন করে লগইন করবে।
+- সরাসরি সফট কপি আপলোড করবে।
+- অর্ডার প্লেস করলেই কাজ শেষ!
 
-## Changelog
-Please see [CHANGELOG](https://github.com/nylo-core/framework/blob/6.x/CHANGELOG.md) for more information what has changed recently.
+### 🔹 প্রাইস ক্যালকুলেশন:
+- আপলোড করা ফাইলের পেজ সংখ্যা অটো ডিটেক্ট হবে।
+- প্রতি পেজের দাম গুণ হয়ে মোট টাকা হিসাব হবে।
 
-## Social
-* [Twitter](https://twitter.com/nylo_dev)
+### 🔹 আমার জন্য ম্যানেজমেন্ট:
+- এডমিন প্যানেল থাকবে, যেখানে সব অর্ডার দেখতে পাবো।
+- এক ক্লিকেই প্রিন্ট!
+- কার কত টাকা বাকি, মাসিক রিপোর্ট – সবকিছু ড্যাশবোর্ডেই পাবো।
+- চাইলে ডিসকাউন্ট কুপন দিতে পারবো, যাতে বন্ধুরা কম খরচে প্রিন্ট করাতে পারে।
 
-## Security
-If you discover any security related issues, please email support@nylo.dev instead of using the issue tracker.
+### 🔹 অর্ডার ট্র্যাকিং:
+- ইউজাররা লাইভ অর্ডার স্ট্যাটাস দেখতে পারবে।
+- অর্ডার **Accepted** হলে নোটিফিকেশন পাবে।
+- প্রিন্ট শেষ হলে **Print Complete** দেখাবে।
+- ডেলিভারি বাকি থাকলে **Delivery Pending** দেখাবে।
 
-## Contributors
-* [Anthony Gordon](https://github.com/agordn52)
-* [lpdevit](https://github.com/lpdevit)
-* [Abdulrasheed1729](https://github.com/Abdulrasheed1729)
-* [Rashid-Khabeer](https://github.com/Rashid-Khabeer)
-* [youssefKadaouiAbbassi](https://github.com/youssefKadaouiAbbassi)
-* [jeremyhalin](https://github.com/jeremyhalin)
-* [abdulawalarif](https://github.com/abdulawalarif)
-* [lepresk](https://github.com/lepresk)
-* [joshua1996](https://github.com/joshua1996)
-* [stensonb](https://github.com/stensonb)
-* [ruwiss](https://github.com/ruwiss)
+### 🎯 আরও একটা দরকারি ফিচার!
+আমি এডমিন প্যানেলে কিছু দরকারি সফট কপি (**PDF, নোটস, বই ইত্যাদি**) রেখে দেবো, যাতে কেউ দরকার হলে সহজেই অর্ডার করতে পারে।
 
-## Contributing
+## 🛠️ Tech Stack:
+✅ **Flutter** – Android অ্যাপের জন্য।  
+✅ **Laravel** – Admin Panel এবং Backend API-র জন্য।  
+✅ **React + Netlify** – Web Version তৈরি ও ফ্রি হোস্টিংয়ের জন্য।  
+✅ **MySQL** – Database হিসাবে, কারণ SQL নিয়ে আমার দক্ষতা ভালো।  
 
-Please see <a href="https://nylo.dev/docs/6.x/contributions" target="_BLANK">CONTRIBUTING</a> for details.
+## 🔥 শেষ কথা
+আলহামদুলিল্লাহ, আমার সমস্যার সমাধান আমি নিজেই বের করতে পেরেছি! এখন বন্ধুরাও খুব সহজে তাদের অ্যাসাইনমেন্ট, রিপোর্ট প্রিন্ট করাতে পারছে, টাকার হিসাবও সহজেই রাখতে পারছে।
 
-## Licence
-
-The MIT License (MIT). Please view the [License](https://github.com/nylo-core/nylo/blob/master/licence) File for more information.
+👉 **এটাই হলো PrintX – আমার নিজের জন্য বানানো, কিন্তু সবার কাজে লাগার মতো একটা পারফেক্ট সলিউশন!** 🚀
